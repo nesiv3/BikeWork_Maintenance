@@ -20,5 +20,5 @@ def get_average_rating(store_id: int):
         service = RatingService(uow.evaluation_repository)
         avg = service.get_store_average(store_id)
         if avg is None:
-            raise HTTPException(status_code=404, detail="No ratings found for this store.")
+            avg=0;
         return {"store_id": store_id, "average_rating": round(avg, 2)}

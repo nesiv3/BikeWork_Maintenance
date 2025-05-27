@@ -16,5 +16,5 @@ class MaintenanceRepository:
         data = self.collection.find_one({"id": maintenance_id})
         return Maintenance(**data)
     
-    def count_by_store(self, store_id: int) -> int:
+    def list_by_store(self, store_id: int) -> int:
         return self.collection.count_documents({"store_id": store_id})
