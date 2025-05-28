@@ -14,7 +14,6 @@ def get_service():
         return RatingService(uow.evaluation_repository)
 
 @router.get("/store/{store_id}/average-rating")
-@redis_cache("/store/{store_id}/average-rating", expire=86400)
 def get_average_rating(store_id: int):
     with UnitOfWork() as uow:
         service = RatingService(uow.evaluation_repository)

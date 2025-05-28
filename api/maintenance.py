@@ -16,7 +16,6 @@ def new_maintenance(data: dict):
         return maintenance
     
 @router.get("/maintenance/count_by_store/{store_id}")
-@redis_cache("/maintenance/count_by_store/{store_id}", expire=86400)
 def count_maintenance_by_store(store_id: int):
     with UnitOfWork() as uow:
         service = MaintenanceService(uow.maintenance_repository)
