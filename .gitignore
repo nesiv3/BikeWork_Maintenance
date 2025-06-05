@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+
+# VSCode
+.vscode/
+.history/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test & Coverage
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+
+# MongoDB dump files
+dump/
+*.bson
+*.json
+
+# Others
+*.sqlite3
+*.db
+*.bak
+*.swp
